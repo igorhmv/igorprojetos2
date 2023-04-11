@@ -1,0 +1,38 @@
+.header {
+
+  z-index:9;
+  width:100%;
+
+  display: flex;
+  background: #1565c0;
+  height: 100px;
+  margin-bottom: 3%;
+
+
+
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header .logo {
+  max-height: 82px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30%;
+
+
+
+}
+
+
