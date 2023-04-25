@@ -34,6 +34,7 @@ import { HeaderComponent } from './Shared/header/header.component';
 import { MatTableModule } from '@angular/material/table';
 
 import { MatToolbar } from '@angular/material/toolbar';
+import { FooterComponent } from './Shared/footer/footer.component';
 
 export const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -45,6 +46,7 @@ export const routes: Routes = [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    FooterComponent,
 
   ],
   imports: [
