@@ -1,5 +1,6 @@
 import { getLocaleExtraDayPeriods } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppRoutingModule } from '../app-routing.module';
 import { Item } from '../models/item';
@@ -16,7 +17,9 @@ import { RelatorioServiceService } from '../services/relatorio-service.service';
 
 export class HomeComponent {
 
+  DataControl = new FormControl('', [Validators.required]);
 
+  data: string = '';
 
   sucessos = [{
     'nome': 'Sim',
@@ -70,10 +73,11 @@ constructor(private relatorioservice: RelatorioServiceService) { }
     console.log('ola');
     this.dataSourceRelatorio = new MatTableDataSource;
 
-    var data = document.querySelector('form')?.getElementsByTagName('input')[0].value;
-    var atendimento = document.querySelector('form')?.getElementsByTagName('input')[1].value;
+    //var data = document.querySelector('form')?.getElementsByTagName('input')[0].value;
+    //var atendimento = document.querySelector('form')?.getElementsByTagName('input')[1].value;
 
-
+    var data = document.getElementsByTagName('input')[0].value;
+    var atendimento = document.getElementsByTagName('input')[1].value;
 
     if(data === undefined || data === null || atendimento === undefined || atendimento === null){
       alert("dados inválidos");

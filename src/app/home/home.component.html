@@ -6,31 +6,26 @@
     <div class="filtro">
         <h2>Filtro do Relatório</h2>
 
-        <form class="formulario" id="formulario">
 
 
 
 
-            <mat-form-field class="data">
-                <mat-label for="dataInput" class="dataLabel"> Data: </mat-label>
-                <input matInput type="date" class="dataInput" id="dataInput">
-            </mat-form-field>
-
-            <h1></h1>
+        <h3>Data:</h3>
+        <mat-form-field class="data">
+          <input matInput required matInput [formControl]="DataControl" name="data" type="date" [(ngModel)]="data" type="date">
+        </mat-form-field>
 
 
-            <mat-form-field class="atendimento">
-                <mat-label for="atendimentoInput"> Atendimento: </mat-label>
-                <input matInput type="text" class="atendimentoInput" id="atendimentoInput">
-            </mat-form-field>
 
-            <h1></h1>
+        <h3>Atendimento:</h3>
+        <mat-form-field class="atendimento">
+          <input matInput  type="text">
+        </mat-form-field>
 
+        <h3></h3>
+
+        <h3>Sucesso:</h3>
             <table class="sucessos">
-                <tr>
-                  <td>Sucesso:</td>
-
-                </tr>
                 <tr *ngFor="let tx of sucessos">
                   <td>{{tx.nome}}</td>
                   <td><input type="checkbox"
@@ -42,8 +37,9 @@
                 </tr>
               </table>
 
+              <h3></h3>
             <button class="btnVisualizar" type="button" (click)="visualizarDados()">Visualizar</button>
-        </form>
+
 
 
     </div>

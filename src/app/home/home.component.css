@@ -3,7 +3,7 @@
   display:flex;
 
   flex-direction: column;
-  z-index:9;
+
 
   margin:auto;
   padding: 80px;
@@ -21,27 +21,22 @@
   }
 
   .filtro {
-
-
-    width: 50%;
     background-color: rgba(248, 247, 247, 0.973);
-    border-radius: 10px;
-    margin: 2%;
-    padding: 1%;
-    box-shadow: 2px 2px 2px 2px rgb(206, 201, 201);
+  border-radius: 10px;
+  margin: 2%;
+  padding: 1%;
+  box-shadow: 2px 2px 2px 2px rgb(206, 201, 201);
+
   }
 
   .data {
-
-   display:inline-block;
     width: 23%;
 
-    margin-right: 1%;
-    background-color: rgba(231, 230, 228, 0.527);
-    border-radius: 10px;
-    padding: 2%;
-    align-items: center;
-
+   justify-content: center;
+  margin-right: 1%;
+  background-color: rgba(231, 230, 228, 0.527);
+  border-radius: 10px;
+  padding: 0.5%;
   }
 
 
@@ -62,14 +57,11 @@
 
 
   .atendimento {
-
-    display: inline-block;
     width: 23%;
     margin-right: 1%;
     background-color: rgba(231, 230, 228, 0.527);
     border-radius: 10px;
-    padding: 2%;
-
+    padding: 0.5%;
 
   }
 
@@ -87,9 +79,8 @@
 
   .sucessos{
 
-    padding:30px;
-    margin:30px;
 
+    margin-right: 1%;
     background-color: rgba(231, 230, 228, 0.527);
     border-radius: 10px;
     padding: 0.5%;
@@ -121,13 +112,14 @@
   display: block;
   margin:20px;
   padding:10px;
+
 }
 
 .resultadoPesquisa mat-table mat-header-row {
 
   box-shadow: 2px 2px 2px 2px rgba(206, 201, 201, 0);
   display: table-row;
-  z-index:8;
+
 
 
 
@@ -140,15 +132,28 @@
   opacity: 1.0;
   box-shadow: 2px 2px 2px 2px rgb(206, 201, 201);
   display: table-row;
+  width: 50px;
   height: 5vh;
+
   background-color: white;
+  border: 1px solid black;
 
 
 }
 
 .resultadoPesquisa mat-table ng-container {
   opacity: 1.0;
-  display: inline-block
+
+  word-wrap:break-word;
+  display: table-cell;
+  padding: 0px 10px;
+  line-break:unset;
+
+
+
+  vertical-align: middle;
+
+
 }
 
 .resultadoPesquisa mat-table ng-container th,
@@ -156,8 +161,7 @@
   opacity: 1.0;
   display: inline-block;
 
-  width: 100%;
-  height: 100%;
+
 
 
 
@@ -166,7 +170,7 @@
 .mat-table {
   opacity: 1.0;
   overflow-x: scroll;
-  width: 100%;
+
 
 }
 
@@ -196,7 +200,11 @@
     background-color: white;
 
     opacity: 1.0;
-    word-wrap: initial;
+
+    border: 1px solid black;
+    word-wrap: break-word;
+
+
     display: table-cell;
 
     line-break: unset;
@@ -207,16 +215,16 @@
     height: 10vh;
   }
 
-  th,td {
-    opacity: 1.0;
+
+
+   th,td {
     word-wrap: initial;
-    display: table-cell;
-
-    line-break: unset;
-
-    white-space: nowrap;
-    overflow: hidden;
-    vertical-align: middle;
-
-    height: 100%;
+  display: table-cell;
+  padding: 0px 10px;
+  line-break: unset;
+  max-width: 25ch;
+    text-overflow: clip;
+  white-space: nowrap;
+  overflow: auto;
+  vertical-align: middle;
   }
