@@ -1,4 +1,4 @@
-
+<div class="pagina">
 <app-header></app-header>
 
 <div class="tela">
@@ -9,22 +9,26 @@
 
 
 
+      <mat-form-field class="data">
 
-        <h3>Data:</h3>
-        <mat-form-field class="data">
-          <input matInput required matInput [formControl]="DataControl" name="data" type="date" [(ngModel)]="data" type="date">
-        </mat-form-field>
+          <mat-label>Data: </mat-label>
 
+          <input matInput [formControl]="DataControl" name="data" type="date" [(ngModel)]="data" type="date" placeholder="data" class="dataInput">
 
+      </mat-form-field>
 
-        <h3>Atendimento:</h3>
+        <h1></h1>
+
         <mat-form-field class="atendimento">
-          <input matInput  type="text">
-        </mat-form-field>
 
+          <mat-label>Atendimento: </mat-label>
+
+          <input matInput [formControl]="AtendimentoControl" class="atendimentoInput" type="text">
+
+        </mat-form-field>
         <h3></h3>
 
-        <h3>Sucesso:</h3>
+        <div>Sucesso:</div>
             <table class="sucessos">
                 <tr *ngFor="let tx of sucessos">
                   <td>{{tx.nome}}</td>
@@ -42,47 +46,47 @@
 
 
 
-    </div>
-
+            </div>
+  <div class="textoResultado"><h2>Resultado da Pesquisa</h2>
     <div class="resultadoPesquisa">
 
-        <h2>Resultado da Pesquisa</h2>
+
 
         <mat-table mat-table [dataSource]="dataSourceRelatorio" matshort>
 
             <ng-container matColumnDef="seq_item_enviado">
-                <th mat-header-cell *matHeaderCellDef> Sequência do item enviado </th>
-                <td mat-cell *matCellDef="let element"> {{element.seq_item_enviado}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Sequência do item enviado </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.seq_item_enviado}}</td>
             </ng-container>
 
             <ng-container matColumnDef="cd_importacao">
-                <th mat-header-cell *matHeaderCellDef> Código da importação </th>
-                <td mat-cell *matCellDef="let element"> {{element.cd_importacao}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Código da importação </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.cd_importacao}}</td>
             </ng-container>
 
             <ng-container matColumnDef="cd_atendimento">
-                <th mat-header-cell *matHeaderCellDef> Código do Atendimento </th>
-                <td mat-cell *matCellDef="let element"> {{element.cd_atendimento}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Código do Atendimento </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.cd_atendimento}}</td>
             </ng-container>
 
             <ng-container matColumnDef="data">
-                <th mat-header-cell *matHeaderCellDef> Data </th>
-                <td mat-cell *matCellDef="let element"> {{element.data}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Data </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.data}}</td>
             </ng-container>
 
             <ng-container matColumnDef="observacao">
-                <th mat-header-cell *matHeaderCellDef> Observação </th>
-                <td mat-cell *matCellDef="let element"> {{element.observacao}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Observação </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.observacao}}</td>
             </ng-container>
 
             <ng-container matColumnDef="sucesso">
-                <th mat-header-cell *matHeaderCellDef> Sucesso </th>
-                <td mat-cell *matCellDef="let element"> {{element.sucesso}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Sucesso </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.sucesso}}</td>
             </ng-container>
 
             <ng-container matColumnDef="xml">
-                <th mat-header-cell *matHeaderCellDef> Xml </th>
-                <td mat-cell *matCellDef="let element"> {{element.xml}}</td>
+                <th mat-header-cell *matHeaderCellDef class="headerCelulaTabela"> Xml </th>
+                <td mat-cell *matCellDef="let element" class="celulaTabela"> {{element.xml}}</td>
             </ng-container>
 
             <mat-header-row class="header-row" *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
@@ -91,7 +95,10 @@
         </mat-table>
 
       </div>
+    </div>
 
 
   </div>
+
+
 

@@ -21,6 +21,10 @@ export class HomeComponent {
 
   data: string = '';
 
+  AtendimentoControl = new FormControl('', [Validators.required]);
+
+  atendimento: string = '';
+
   sucessos = [{
     'nome': 'Sim',
     'selecionado': false

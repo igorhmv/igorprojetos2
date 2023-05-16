@@ -1,53 +1,59 @@
+
+.pagina{
+  display: flex;
+  flex-direction: row;
+
+
+}
+
 .tela{
-
-  display:flex;
-
+  width:80%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
-
-
-  margin:auto;
-  padding: 80px;
-
 }
 
 
   .formulario{
 
-    display: flex;
-    flex-direction: row;
-   justify-content: flex-start;
-    align-items: center;
 
   }
 
   .filtro {
-    background-color: rgba(248, 247, 247, 0.973);
-  border-radius: 10px;
-  margin: 2%;
-  padding: 1%;
-  box-shadow: 2px 2px 2px 2px rgb(206, 201, 201);
 
+    padding: 10px;
+    display: flex;
+  flex-direction: column;
   }
 
   .data {
-    width: 23%;
-
+    font-family:inherit;
+    font-weight: 400;
+    font-size:1rem;
+    color:black;
+    width:200px;
+    height:50px;
    justify-content: center;
-  margin-right: 1%;
-  background-color: rgba(231, 230, 228, 0.527);
-  border-radius: 10px;
-  padding: 0.5%;
-  }
+  margin-right: 1px;
 
+  padding: 10px;
+  }
 
 
 
 
  .dataInput {
 
-  width:100%;
-  height: 100%;
-    padding:10%;
+  font-family:inherit;
+  font-weight: 400;
+  font-size:1rem;
+  color:black;
+
+ justify-content: center;
+ margin-right: 1px;
+
+ padding: 10px;
+
     background-color: white;
 
 
@@ -57,174 +63,207 @@
 
 
   .atendimento {
-    width: 23%;
-    margin-right: 1%;
-    background-color: rgba(231, 230, 228, 0.527);
-    border-radius: 10px;
-    padding: 0.5%;
+    width:200px;
+    height:50px;
+    font-family:inherit;
+    font-weight: 400;
+    font-size:1rem;
+    color:black;
+    margin-right: 10px;
+
+  padding: 10px;
 
   }
 
 
 
   .atendimentoInput {
-    width:100%;
-    padding:10%;
+    margin-right: 1px;
 
-    background-color: white;
-
+ padding: 10px;
   }
 
 
 
   .sucessos{
+    font-family:inherit;
+    font-weight: 400;
 
+    width: 200px;
 
-    margin-right: 1%;
-    background-color: rgba(231, 230, 228, 0.527);
-    border-radius: 10px;
-    padding: 0.5%;
+    margin-right: 1px;
+
+    padding: 10px;
   }
 
   .btnVisualizar{
-    background-color: blue;
+    background-color:darkblue;
+    border-radius: 10px;
     color: white;
-    height: 30px;
+    width:80px;
+    height: 40px;
     margin-left: 10px;
 
 }
 
-.resultadoPesquisa {
-
-  display:inline-block;
-  background-color: rgba(248, 247, 247, 0);
-  border-radius: 10px;
-  margin: 2%;
-
-  padding: 1%;
-
-  box-shadow: 2px 2px 2px 2px rgb(206, 201, 201);
-  width:fit-content;
-
-}
-
-.resultadoPesquisa mat-table{
-  display: block;
-  margin:20px;
-  padding:10px;
-
-}
-
-.resultadoPesquisa mat-table mat-header-row {
-
-  box-shadow: 2px 2px 2px 2px rgba(206, 201, 201, 0);
-  display: table-row;
 
 
-
-
-  background-color: white;
-}
-
-
-
-.resultadoPesquisa mat-table mat-row {
+.sucessos tr td {
   opacity: 1.0;
-  box-shadow: 2px 2px 2px 2px rgb(206, 201, 201);
-  display: table-row;
-  width: 50px;
-  height: 5vh;
-
-  background-color: white;
-  border: 1px solid black;
-
-
-}
-
-.resultadoPesquisa mat-table ng-container {
-  opacity: 1.0;
-
-  word-wrap:break-word;
-  display: table-cell;
-  padding: 0px 10px;
-  line-break:unset;
-
-
-
-  vertical-align: middle;
-
-
-}
-
-.resultadoPesquisa mat-table ng-container th,
-.resultadoPesquisa mat-table ng-container td{
-  opacity: 1.0;
-  display: inline-block;
-
-
-
-
-
-}
-
-.mat-table {
-  opacity: 1.0;
-  overflow-x: scroll;
-
-
-}
-
-.mat-header-cell{
-  padding-top:10px;
-
-  position: fixed;
-
-  color:black;
-
-
-
-  word-wrap: initial;
   display: table-cell;
 
-  line-break: unset;
 
-  white-space: nowrap;
-  overflow:hidden;
-  vertical-align: middle;
-  height: 10vh;
-}
-
-.mat-cell {
-
-    color:black;
-    background-color: white;
-
-    opacity: 1.0;
-
-    border: 1px solid black;
-    word-wrap: break-word;
-
-
-    display: table-cell;
-
-    line-break: unset;
-
-    white-space: nowrap;
-    overflow:hidden;
-    vertical-align: middle;
-    height: 10vh;
-  }
-
-
-
-   th,td {
     word-wrap: initial;
   display: table-cell;
   padding: 0px 10px;
   line-break: unset;
   max-width: 25ch;
+
+    text-overflow: clip;
+
+  white-space: nowrap;
+  vertical-align: middle;
+  font-family:inherit;
+    font-weight: 400;
+    font-size:1rem;
+
+
+
+}
+
+ng-container {
+  opacity: 1.0;
+
+
+  display: table-cell;
+
+
+
+  vertical-align: middle;
+
+
+}
+
+mat-header-row {
+
+
+  display: table-row;
+
+
+
+  background-color: white;
+
+}
+
+
+mat-row {
+  opacity: 1.0;
+
+  display: table-row;
+
+
+
+  background-color: white;
+
+}
+
+mat-table{
+
+  display: table;
+  height: 80%;
+}
+
+.textoResultado{
+  padding:10px;
+
+}
+
+.resultadoPesquisa {
+
+
+overflow: scroll;
+
+}
+
+.headerCelulaTabela{
+  word-wrap: initial;
+    display: table-cell;
+  height: 50px;
+    line-break: unset;
+
+      text-overflow: clip;
+    white-space: nowrap;
+
+    vertical-align: middle;
+
+      font-weight: 400;
+
+    color: gray;
+}
+
+.celulaTabela
+  {
+    height: 50px;
+    word-wrap: initial;
+    display: table-cell;
+
+    line-break: unset;
+
+      text-overflow: clip;
+    white-space: nowrap;
+
+    vertical-align: middle;
+
+      font-weight: 400;
+
+    color: black;
+
+
+  }
+
+
+td
+  {
+
+    word-wrap: initial;
+  display: table-cell;
+
+  line-break: unset;
+  min-width:300px;
+
     text-overflow: clip;
   white-space: nowrap;
-  overflow: auto;
+
   vertical-align: middle;
+
+    font-weight: 400;
+
+    color:gray;
+
+
   }
+
+  th .celulaTabela
+  {
+    min-width:300px;
+    word-wrap: initial;
+  display: table-cell;
+
+  line-break: unset;
+
+
+    text-overflow: clip;
+  white-space: nowrap;
+
+  vertical-align: middle;
+
+    font-weight: 400;
+
+    color:black;
+
+
+  }
+
+
+
+

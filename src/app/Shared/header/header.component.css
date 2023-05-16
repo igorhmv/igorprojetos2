@@ -1,15 +1,18 @@
 .header {
 
   z-index:9;
-  width:100%;
+  width:200px;
 
   display: flex;
   background: #1565c0;
-  height: 100px;
+  min-height:1000px;
+  height:100%;
   margin-bottom: 3%;
 
-
-
+  flex-direction: column;
+  justify-content: baseline;
+  align-items:center;
+  text-align: center;
 }
 
 .header a {
@@ -29,7 +32,9 @@
   color: whitesmoke;
   align-items: center;
   justify-content: center;
-  padding-left: 30%;
+
+
+
 
 
 
