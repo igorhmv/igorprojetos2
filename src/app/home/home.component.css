@@ -146,12 +146,10 @@ ng-container {
 
 mat-header-row {
 
-
   display: table-row;
+  font-weight: bolder;
 
-
-
-  background-color: white;
+  border-left-width: 1px;
 
 }
 
@@ -161,16 +159,25 @@ mat-row {
 
   display: table-row;
 
+  border: 1px solid white;
+  border-left-width: 0;
 
-
-  background-color: white;
+  background-color:rgba(1,1,1,0.05);
 
 }
 
 mat-table{
-
+  width: 100%;
   display: table;
-  height: 80%;
+
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: -8px;
+
+
+  color: black;
+
+
 }
 
 .textoResultado{
@@ -186,80 +193,134 @@ overflow: scroll;
 }
 
 .headerCelulaTabela{
-  word-wrap: initial;
-    display: table-cell;
-  height: 50px;
-    line-break: unset;
 
-      text-overflow: clip;
-    white-space: nowrap;
+  min-width:400px;
+  vertical-align: middle;
 
-    vertical-align: middle;
+  word-wrap:initial;
+display: table-cell;
 
-      font-weight: 400;
 
-    color: gray;
+
+
+  text-overflow: clip;
+white-space: nowrap;
+
+
+
+  font-weight: 10px;
+
+  font-size:18px;
+  color:black;
+
+  text-align: left;
+
 }
 
 .celulaTabela
   {
+    min-width:400px;
     height: 50px;
-    word-wrap: initial;
-    display: table-cell;
-
-    line-break: unset;
-
-      text-overflow: clip;
-    white-space: nowrap;
-
     vertical-align: middle;
 
-      font-weight: 400;
+    word-wrap:initial;
+  display: table-cell;
+
+
+
+
+    text-overflow: clip;
+  white-space: nowrap;
+
+
+  font-family:inherit;
+    font-weight: 10px;
+    font-size:18px;
+
+
+    text-align: left;
+
 
     color: black;
-
 
   }
 
 
 td
   {
-
-    word-wrap: initial;
+    min-width:400px;
+    vertical-align: middle;
+width:50px;
+    word-wrap:break-word;
   display: table-cell;
 
-  line-break: unset;
-  min-width:300px;
+
+
 
     text-overflow: clip;
   white-space: nowrap;
 
-  vertical-align: middle;
 
-    font-weight: 400;
+  font-family:inherit;
+    font-weight: 10px;
+    font-size:18px;
 
-    color:gray;
 
+    text-align: left;
+
+
+    color: black;
+}
+
+   th {
+    min-width:400px;
+    height: 50px;
+    vertical-align: middle;
+
+    word-wrap:break-word;
+  display: table-cell;
+
+
+
+
+    text-overflow: clip;
+  white-space: nowrap;
+
+
+
+    font-weight: 10px;
+
+    font-size:18px;
+    color:black;
+
+    text-align: left;
 
   }
 
   th .celulaTabela
   {
-    min-width:300px;
-    word-wrap: initial;
+
+    min-width:400px;
+
+    vertical-align: middle;
+
+    word-wrap:initial;
   display: table-cell;
 
-  line-break: unset;
+
 
 
     text-overflow: clip;
   white-space: nowrap;
 
-  vertical-align: middle;
 
-    font-weight: 400;
 
+    font-weight: 10px;
+
+    font-size:18px;
     color:black;
+
+    text-align: left;
 
 
   }
